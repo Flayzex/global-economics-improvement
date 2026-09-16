@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="5 актуальных новостей о глобальном развитии экономики — сентябрь 2026">
+  <title>Глобальное развитие экономики — 5 актуальных новостей</title>
+  <style>
+    :root{
+      --bg:#08111f;
+      --bg2:#0d1728;
+      --card:#111d31;
+      --card2:#15233a;
+      --text:#f4f7fb;
+      --muted:#aebbd0;
+      --line:rgba(255,255,255,.10);
+      --accent:#79a8ff;
+      --accent2:#66e0bf;
+      --gold:#ffd27a;
+      --shadow:0 24px 70px rgba(0,0,0,.34);
+      --radius:28px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at 15% 5%, rgba(63,117,255,.18), transparent 28%),
+        radial-gradient(circle at 86% 18%, rgba(58,205,168,.10), transparent 24%),
+        linear-gradient(180deg,#07101d 0%,#0a1423 45%,#08111f 100%);
+      color:var(--text);
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height:1.55;
+    }
+
+    a{color:inherit}
+
+    .shell{
+      width:min(1460px, calc(100% - 64px));
+      margin:0 auto;
+    }
+
+    header{
+      min-height:72vh;
+      display:grid;
+      align-items:end;
+      padding:70px 0 56px;
+      position:relative;
+      overflow:hidden;
+      border-bottom:1px solid var(--line);
+    }
+
+    header::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(90deg, rgba(8,17,31,.94) 0%, rgba(8,17,31,.70) 46%, rgba(8,17,31,.22) 100%),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/G20%20Summit%20in%20China%20%28P-032256-00-22%29.jpg") center 35% / cover no-repeat;
+      z-index:-1;
+      filter:saturate(.85) contrast(1.02);
+    }
+
+    .kicker{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      font-size:13px;
+      font-weight:800;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:#cfe0ff;
+      background:rgba(9,21,40,.65);
+      border:1px solid rgba(121,168,255,.35);
+      padding:10px 14px;
+      border-radius:999px;
+      backdrop-filter:blur(10px);
+    }
+
+    .hero{
+      max-width:970px;
+    }
+
+    h1{
+      font-size:clamp(54px,6.7vw,104px);
+      line-height:.96;
+      letter-spacing:-.055em;
+      margin:22px 0 24px;
+      max-width:1100px;
+    }
+
+    .lead{
+      font-size:clamp(18px,1.55vw,25px);
+      max-width:880px;
+      color:#d8e2f2;
+      margin:0;
+    }
+
+    .hero-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:28px;
+    }
+
+    .pill{
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(8,17,31,.55);
+      color:#dfe8f5;
+      font-size:14px;
+      backdrop-filter:blur(8px);
+    }
+
+    main{
+      padding:72px 0 90px;
+    }
+
+    .section-head{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:40px;
+      align-items:end;
+      margin-bottom:32px;
+    }
+
+    .section-head h2{
+      font-size:clamp(34px,3.4vw,54px);
+      margin:0;
+      letter-spacing:-.035em;
+    }
+
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+      font-size:17px;
+      justify-self:end;
+      max-width:620px;
+    }
+
+    .news{
+      display:grid;
+      gap:28px;
+    }
+
+    article{
+      display:grid;
+      grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+      min-height:510px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:linear-gradient(135deg,rgba(18,31,52,.96),rgba(13,24,42,.95));
+      box-shadow:var(--shadow);
+    }
+
+    article:nth-child(even){
+      grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);
+    }
+
+    article:nth-child(even) .visual{order:2}
+    article:nth-child(even) .copy{order:1}
+
+    .visual{
+      position:relative;
+      min-height:500px;
+      background:#0c1728;
+      overflow:hidden;
+    }
+
+    .visual img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transition:transform .6s ease;
+    }
+
+    article:hover .visual img{transform:scale(1.025)}
+
+    .visual::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg,transparent 48%,rgba(5,12,23,.65) 100%);
+      pointer-events:none;
+    }
+
+    .image-credit{
+      position:absolute;
+      left:18px;
+      bottom:15px;
+      z-index:2;
+      color:#e7edf7;
+      font-size:11px;
+      background:rgba(5,12,23,.64);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:8px;
+      padding:7px 9px;
+      backdrop-filter:blur(8px);
+    }
+
+    .copy{
+      padding:42px 46px 40px;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:24px;
+    }
+
+    .num{
+      width:46px;
+      height:46px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:rgba(121,168,255,.13);
+      border:1px solid rgba(121,168,255,.28);
+      color:#cfe0ff;
+      font-weight:850;
+      font-size:18px;
+    }
+
+    .date{
+      font-size:13px;
+      color:#9fb0c8;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-weight:750;
+    }
+
+    article h3{
+      font-size:clamp(28px,2.3vw,42px);
+      line-height:1.08;
+      letter-spacing:-.032em;
+      margin:0 0 18px;
+    }
+
+    .summary{
+      color:#c7d2e3;
+      font-size:17px;
+      margin:0 0 26px;
+    }
+
+    .stats{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin:4px 0 28px;
+    }
+
+    .stat{
+      min-width:145px;
+      padding:14px 16px;
+      background:rgba(255,255,255,.045);
+      border:1px solid var(--line);
+      border-radius:16px;
+    }
+
+    .stat strong{
+      display:block;
+      font-size:26px;
+      line-height:1;
+      margin-bottom:7px;
+      color:#fff;
+      letter-spacing:-.025em;
+    }
+
+    .stat span{
+      display:block;
+      color:#99a9bf;
+      font-size:12px;
+    }
+
+    .topic{
+      margin-top:auto;
+      border-left:3px solid var(--accent2);
+      padding:10px 0 10px 15px;
+      color:#afc0d6;
+      font-size:14px;
+    }
+
+    .topic b{color:#d9fff3}
+
+    .source{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin-top:22px;
+      width:max-content;
+      text-decoration:none;
+      color:#dce8ff;
+      font-weight:750;
+      padding:11px 15px;
+      border-radius:12px;
+      background:rgba(121,168,255,.10);
+      border:1px solid rgba(121,168,255,.25);
+      transition:.2s ease;
+    }
+
+    .source:hover{
+      background:rgba(121,168,255,.18);
+      transform:translateY(-1px);
+    }
+
+    .source::after{
+      content:"↗";
+      font-size:16px;
+    }
+
+    .closing{
+      margin-top:52px;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:26px;
+    }
+
+    .closing > div{
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:30px;
+      background:rgba(255,255,255,.035);
+    }
+
+    .closing h4{
+      margin:0 0 10px;
+      font-size:24px;
+      letter-spacing:-.02em;
+    }
+
+    .closing p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:18px;
+    }
+
+    .tag{
+      padding:8px 11px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:#d4deec;
+      font-size:13px;
+      background:rgba(255,255,255,.035);
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:34px 0 50px;
+      color:#8394aa;
+      font-size:12px;
+    }
+
+    footer a{
+      color:#a9bad0;
+      text-decoration:none;
+      border-bottom:1px dotted rgba(255,255,255,.25);
+    }
+
+    .credits{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:8px 30px;
+      margin-top:12px;
+    }
+
+    @media (max-width:1000px){
+      .shell{width:min(100% - 32px, 1460px)}
+      header{min-height:66vh}
+      .section-head,
+      .closing{
+        grid-template-columns:1fr;
+      }
+      .section-head p{justify-self:start}
+      article,
+      article:nth-child(even){
+        grid-template-columns:1fr;
+      }
+      article:nth-child(even) .visual,
+      article:nth-child(even) .copy{order:initial}
+      .visual{min-height:340px}
+      .copy{padding:30px}
+    }
+
+    @media (max-width:620px){
+      h1{font-size:48px}
+      .copy{padding:24px}
+      .visual{min-height:280px}
+      .stats{display:grid;grid-template-columns:1fr 1fr}
+      .stat{min-width:0}
+      .credits{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="shell hero">
+    <div class="kicker">Мировая экономика • Сентябрь 2026</div>
+    <h1>5 новостей о глобальном развитии экономики</h1>
+    <p class="lead">Мировой рост, искусственный интеллект, еврозона, китайская торговля и рынок нефти — пять событий, которые хорошо показывают, как меняется глобальная экономика прямо сейчас.</p>
+    <div class="hero-meta">
+      <span class="pill">Данные: 9–15 сентября 2026</span>
+      <span class="pill">Коммерсантъ + Интерфакс</span>
+    </div>
+  </div>
+</header>
+
+<main class="shell">
+  <section class="section-head">
+    <h2>Ключевые события</h2>
+    <p>Каждая новость связана с темами глобализации: темпами роста, международной торговлей, технологиями, региональной интеграцией и мировыми товарными рынками.</p>
+  </section>
+
+  <section class="news">
+
+    <article>
+      <div class="visual">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/G20%20Summit%20in%20China%20%28P-032256-00-22%29.jpg" alt="Саммит G20" loading="eager">
+        <div class="image-credit">Фото: European Commission / Wikimedia Commons</div>
+      </div>
+      <div class="copy">
+        <div class="row">
+          <span class="num">01</span>
+          <span class="date">15 сентября 2026</span>
+        </div>
+        <h3>Рост экономики стран G20 замедлился</h3>
+        <p class="summary">Совокупный ВВП стран G20 во II квартале 2026 года вырос на 3,1% в годовом выражении после 3,3% в I квартале. По данным ОЭСР, это самые низкие темпы роста с II квартала 2024 года. Динамика внутри группы остается неоднородной: часть экономик ускоряется, часть теряет темп.</p>
+        <div class="stats">
+          <div class="stat"><strong>3,1%</strong><span>рост ВВП G20 во II квартале</span></div>
+          <div class="stat"><strong>3,3%</strong><span>рост в I квартале 2026</span></div>
+          <div class="stat"><strong>8,1%</strong><span>рост Индии — максимум среди указанных стран</span></div>
+        </div>
+        <div class="topic"><b>Связь с темой:</b> глобальное экономическое развитие и неравномерность темпов роста разных стран.</div>
+        <a class="source" href="https://www.kommersant.ru/doc/8954632" target="_blank" rel="noopener">Источник: Коммерсантъ</a>
+      </div>
+    </article>
+
+    <article>
+      <div class="visual">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/World%20Trade%20Organization%20%28logo%20and%20wordmark%29.svg" alt="Логотип Всемирной торговой организации" loading="lazy" style="object-fit:contain;padding:13%;background:linear-gradient(135deg,#f6f8fc,#dfe9f7)">
+        <div class="image-credit">Изображение: World Trade Organization / Wikimedia Commons</div>
+      </div>
+      <div class="copy">
+        <div class="row">
+          <span class="num">02</span>
+          <span class="date">15 сентября 2026</span>
+        </div>
+        <h3>ВТО: ИИ может увеличить мировую торговлю на 40%</h3>
+        <p class="summary">Всемирная торговая организация оценивает, что развитие искусственного интеллекта способно увеличить объем мировой торговли к 2040 году примерно на 40%. Самый заметный эффект ожидается в цифровых услугах, где технологии снижают стоимость международных операций и расширяют доступ к рынкам.</p>
+        <div class="stats">
+          <div class="stat"><strong>+40%</strong><span>потенциальный рост мировой торговли к 2040</span></div>
+          <div class="stat"><strong>27,6%</strong><span>доля коммерческих услуг в мировой торговле в 2025</span></div>
+          <div class="stat"><strong>+10%</strong><span>рост цифровых услуг в 2025</span></div>
+        </div>
+        <div class="topic"><b>Связь с темой:</b> цифровая глобализация, международная торговля, технологии и глобальная инфраструктура.</div>
+        <a class="source" href="https://www.kommersant.ru/doc/8955205" target="_blank" rel="noopener">Источник: Коммерсантъ</a>
+      </div>
+    </article>
+
+    <article>
+      <div class="visual">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt%20am%20Main%2C%20Seat%20of%20the%20European%20Central%20Bank%20%28Skytower%20%28ECB%29%29.jpg" alt="Здание Европейского центрального банка во Франкфурте" loading="lazy">
+        <div class="image-credit">Фото: Dr. Thomas Liptak / Wikimedia Commons, CC BY-SA 4.0</div>
+      </div>
+      <div class="copy">
+        <div class="row">
+          <span class="num">03</span>
+          <span class="date">10 сентября 2026</span>
+        </div>
+        <h3>ЕЦБ повысил прогноз роста экономики еврозоны</h3>
+        <p class="summary">Европейский центральный банк ожидает рост ВВП еврозоны на 0,9% в 2026 году и на 1,4% в 2027-м. Ранее прогноз составлял 0,8% и 1,2% соответственно. ЕЦБ связывает пересмотр прежде всего с большей устойчивостью экономики валютного блока, чем ожидалось.</p>
+        <div class="stats">
+          <div class="stat"><strong>0,9%</strong><span>прогноз роста еврозоны в 2026</span></div>
+          <div class="stat"><strong>1,4%</strong><span>прогноз на 2027</span></div>
+          <div class="stat"><strong>1,5%</strong><span>прогноз на 2028</span></div>
+        </div>
+        <div class="topic"><b>Связь с темой:</b> региональная экономическая интеграция, устойчивость крупных экономических блоков и макроэкономическая политика.</div>
+        <a class="source" href="https://www.interfax.ru/business/1115316" target="_blank" rel="noopener">Источник: Интерфакс</a>
+      </div>
+    </article>
+
+    <article>
+      <div class="visual">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Yangshan-Port-Containers.jpg" alt="Контейнерный порт Яншань, Китай" loading="lazy">
+        <div class="image-credit">Фото: Reb42 / Wikimedia Commons, CC BY 3.0</div>
+      </div>
+      <div class="copy">
+        <div class="row">
+          <span class="num">04</span>
+          <span class="date">9 сентября 2026</span>
+        </div>
+        <h3>Экспорт Китая вырос на четверть</h3>
+        <p class="summary">Китайский экспорт в августе увеличился на 25% год к году и достиг $401,4 млрд. Особенно быстро росли поставки высокотехнологичной продукции. Экспорт полупроводников вырос в 2,2 раза, а импорт оборудования для автоматической обработки данных почти утроился.</p>
+        <div class="stats">
+          <div class="stat"><strong>+25%</strong><span>рост экспорта Китая</span></div>
+          <div class="stat"><strong>$401,4 млрд</strong><span>объем экспорта в августе</span></div>
+          <div class="stat"><strong>×2,2</strong><span>рост экспорта полупроводников</span></div>
+        </div>
+        <div class="topic"><b>Связь с темой:</b> международное разделение труда, глобализация производства и влияние ИИ на мировые цепочки поставок.</div>
+        <a class="source" href="https://www.kommersant.ru/doc/8939395" target="_blank" rel="noopener">Источник: Коммерсантъ</a>
+      </div>
+    </article>
+
+    <article>
+      <div class="visual">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Oil%20pumpjack%20in%20the%20Permian%20Basin.jpg" alt="Нефтяная качалка" loading="lazy">
+        <div class="image-credit">Фото: Quintin Soloviev / Wikimedia Commons</div>
+      </div>
+      <div class="copy">
+        <div class="row">
+          <span class="num">05</span>
+          <span class="date">10 сентября 2026</span>
+        </div>
+        <h3>ОПЕК снова снизила прогноз роста мирового спроса на нефть</h3>
+        <p class="summary">ОПЕК ожидает, что мировой спрос на нефть в 2026 году увеличится примерно на 0,4 млн баррелей в сутки и достигнет 105,84 млн баррелей в сутки. Месяцем ранее организация ожидала прирост на 0,6 млн баррелей в сутки.</p>
+        <div class="stats">
+          <div class="stat"><strong>+0,4 млн</strong><span>барр./сутки — ожидаемый прирост спроса</span></div>
+          <div class="stat"><strong>105,84 млн</strong><span>барр./сутки — общий мировой спрос</span></div>
+          <div class="stat"><strong>+2,4 млн</strong><span>барр./сутки — прогноз прироста на 2027</span></div>
+        </div>
+        <div class="topic"><b>Связь с темой:</b> мировой энергетический рынок, взаимозависимость национальных экономик и глобальные товарные потоки.</div>
+        <a class="source" href="https://www.kommersant.ru/doc/8941019" target="_blank" rel="noopener">Источник: Коммерсантъ</a>
+      </div>
+    </article>
+
+  </section>
+
+  <section class="closing">
+    <div>
+      <h4>Что объединяет эти новости?</h4>
+      <p>Они показывают сразу несколько направлений глобального развития: замедление общего роста при сильной разнице между странами, усиление роли ИИ, рост цифровой торговли, высокую значимость Китая в международных цепочках поставок и зависимость мировой экономики от энергетического рынка.</p>
+      <div class="tags">
+        <span class="tag">Глобализация</span>
+        <span class="tag">G20</span>
+        <span class="tag">ИИ</span>
+        <span class="tag">Мировая торговля</span>
+        <span class="tag">Еврозона</span>
+        <span class="tag">Китай</span>
+        <span class="tag">Нефть</span>
+      </div>
+    </div>
+    <div>
+      <h4>Период</h4>
+      <p>Подборка составлена по публикациям за 9–15 сентября 2026 года. Числа и формулировки в карточках основаны на указанных русскоязычных источниках.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="shell">
+    <strong>Источники изображений</strong>
+    <div class="credits">
+      <span>G20 — <a href="https://commons.wikimedia.org/wiki/File:G20_Summit_in_China_(P-032256-00-22).jpg" target="_blank">Wikimedia Commons</a></span>
+      <span>ВТО — <a href="https://commons.wikimedia.org/wiki/File:World_Trade_Organization_(logo_and_wordmark).svg" target="_blank">Wikimedia Commons</a></span>
+      <span>ЕЦБ — <a href="https://commons.wikimedia.org/wiki/File:Frankfurt_am_Main,_Seat_of_the_European_Central_Bank_(Skytower_(ECB)).jpg" target="_blank">Wikimedia Commons</a></span>
+      <span>Порт Яншань — <a href="https://commons.wikimedia.org/wiki/File:Yangshan-Port-Containers.jpg" target="_blank">Wikimedia Commons</a></span>
+      <span>Нефть — <a href="https://commons.wikimedia.org/wiki/File:Oil_pumpjack_in_the_Permian_Basin.jpg" target="_blank">Wikimedia Commons</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
